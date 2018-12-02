@@ -13,7 +13,7 @@ Web component implementation of a notification styled UI. Inspired around Fireba
 
 
 ## Using a CDN
-- Put a script tag similar to this `<script src='https://unpkg.com/@academy-ui/notification@1.0.1/dist/notification-controller.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/@academy-ui/notification@1.0.2/dist/notification-controller.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 
@@ -43,6 +43,16 @@ document.getElementsByTagName('notification-controller').item(0).success('This i
 
 ```
 document.getElementsByTagName('notification-controller').item(0).error('This is an error alert.');
+```
+
+### Warning Messages
+```
+document.getElementsByTagName('notification-controller').item(0).warning('This is a warning alert.');
+```
+
+### Info Messages
+```
+document.getElementsByTagName('notification-controller').item(0).error('This is an info alert.');
 ```
 
 Note: You can pass the full options config instead of a string message to control other properties such as icons, durations, individual notification animations, etc.

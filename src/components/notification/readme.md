@@ -14,9 +14,11 @@
 | `dismissOnClick` | `dismiss-on-click` |             | `boolean`                                                                             |
 | `duration`       | `duration`         |             | `number`                                                                              |
 | `errorIcon`      | `error-icon`       |             | `string`                                                                              |
+| `infoIcon`       | `info-icon`        |             | `string`                                                                              |
 | `message`        | `message`          |             | `string`                                                                              |
 | `successIcon`    | `success-icon`     |             | `string`                                                                              |
-| `type`           | `type`             |             | `"error" \| "success"`                                                                |
+| `type`           | `type`             |             | `"error" \| "info" \| "success" \| "warning"`                                         |
+| `warningIcon`    | `warning-icon`     |             | `string`                                                                              |
 
 
 ## Events

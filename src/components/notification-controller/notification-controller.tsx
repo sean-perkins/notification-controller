@@ -1,6 +1,6 @@
 import { Component, Method, Element, Prop } from '@stencil/core';
 import { NotificationOptions } from '../../interfaces';
-import { AnimationIn, AnimationOut } from '../../types';
+import { AnimationIn, AnimationOut, NotificationType } from '../../types';
 
 @Component({
     tag: 'notification-controller',
@@ -19,19 +19,27 @@ export class NotificationController {
 
     @Method()
     success(opts: NotificationOptions | string) {
-        opts = this.setDefaults(opts);
-        opts.type = 'success';
-        this.createNotification(opts);
+        this.createNotification(opts, 'success');
     }
 
     @Method()
     error(opts: NotificationOptions | string) {
-        opts = this.setDefaults(opts);
-        opts.type = 'error';
-        this.createNotification(opts);
+        this.createNotification(opts, 'error');
     }
 
-    private createNotification(opts: NotificationOptions) {
+    @Method()
+    info(opts: NotificationOptions | string) {
+        this.createNotification(opts, 'info');
+    }
+
+    @Method()
+    warning(opts: NotificationOptions | string) {
+        this.createNotification(opts, 'warning');
+    }
+
+    private createNotification(opts: NotificationOptions | string, type: NotificationType = 'success') {
+        opts = this.setDefaults(opts);
+        opts.type = type;
         const notification = this.doc.createElement('app-notification');
         Object.assign(notification, opts);
         this.controllerEl.appendChild(notification);

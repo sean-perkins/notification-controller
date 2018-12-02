@@ -24,6 +24,10 @@ export class AppNotification {
 
     @Prop() errorIcon = 'close-circle';
 
+    @Prop() infoIcon = 'information-circle';
+
+    @Prop() warningIcon = 'alert';
+
     @Prop({ mutable: true}) dismissOnClick = true;
 
     @Event() notificationCompleted: EventEmitter;
@@ -32,9 +36,7 @@ export class AppNotification {
 
     componentDidLoad() {
         this.notificationEl.classList.add(this.animationIn);
-        this.durationTimeout = setTimeout(() => {
-            this.notificationEl.classList.add(this.animationOut);
-        }, this.duration);
+        this.durationTimeout = setTimeout(() => this.notificationEl.classList.add(this.animationOut), this.duration);
         this.waitForAnimationOut();
     }
 
@@ -50,6 +52,7 @@ export class AppNotification {
 
     getIcon() {
         let iconName = '';
+        console.log('type', this.type);
         switch (this.type) {
             case 'success':
                 iconName = this.successIcon;
@@ -57,7 +60,14 @@ export class AppNotification {
             case 'error':
                 iconName = this.errorIcon;
                 break;
+            case 'info':
+                iconName = this.infoIcon;
+                break;
+            case 'warning':
+                iconName = this.warningIcon;
+                break;
         }
+        console.log('iconName', iconName);
         return (
             <ion-icon class={this.type} name={iconName}></ion-icon>
         );

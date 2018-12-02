@@ -5,6 +5,8 @@
     --padding: 0 10px;
     --icon-success-color: #01BFA5;
     --icon-error-color: #F44336;
+    --icon-info-color: #2196f3;
+    --icon-warning-color: #ffc107;
     --icon-size: 20px;
     --border-radius: 8px;
 
@@ -84,6 +86,14 @@ ion-icon.error {
 
 ion-icon.success {
     color: var(--icon-success-color);
+}
+
+ion-icon.info {
+    color: var(--icon-info-color);
+}
+
+ion-icon.warning {
+    color: var(--icon-warning-color);
 }
 
 @keyframes slideInTop {

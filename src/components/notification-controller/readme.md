@@ -31,7 +31,39 @@ Type: `void`
 
 
 
+### `info(opts: string | NotificationOptions) => void`
+
+
+
+#### Parameters
+
+| Name   | Type                            | Description |
+| ------ | ------------------------------- | ----------- |
+| `opts` | `NotificationOptions \| string` |             |
+
+#### Returns
+
+Type: `void`
+
+
+
 ### `success(opts: string | NotificationOptions) => void`
+
+
+
+#### Parameters
+
+| Name   | Type                            | Description |
+| ------ | ------------------------------- | ----------- |
+| `opts` | `NotificationOptions \| string` |             |
+
+#### Returns
+
+Type: `void`
+
+
+
+### `warning(opts: string | NotificationOptions) => void`
 
 
 

@@ -24,7 +24,9 @@ export namespace Components {
     'animationIn': AnimationIn;
     'animationOut': AnimationOut;
     'error': (opts: string | NotificationOptions) => void;
+    'info': (opts: string | NotificationOptions) => void;
     'success': (opts: string | NotificationOptions) => void;
+    'warning': (opts: string | NotificationOptions) => void;
   }
   interface NotificationControllerAttributes extends StencilHTMLAttributes {
     'animationIn'?: AnimationIn;
@@ -37,9 +39,11 @@ export namespace Components {
     'dismissOnClick': boolean;
     'duration': number;
     'errorIcon': string;
+    'infoIcon': string;
     'message': string;
     'successIcon': string;
     'type': NotificationType;
+    'warningIcon': string;
   }
   interface AppNotificationAttributes extends StencilHTMLAttributes {
     'animationIn'?: AnimationIn;
@@ -47,10 +51,12 @@ export namespace Components {
     'dismissOnClick'?: boolean;
     'duration'?: number;
     'errorIcon'?: string;
+    'infoIcon'?: string;
     'message'?: string;
     'onNotificationCompleted'?: (event: CustomEvent) => void;
     'successIcon'?: string;
     'type'?: NotificationType;
+    'warningIcon'?: string;
   }
 }
 

@@ -17,20 +17,29 @@
 
 <body>
 
-    <button type="button" onclick="successNotification()">Display Success Notification</button>
-
-    <button type="button" onclick="errorNotification()">Display Error Notification</button>
+    <button type="button" onclick="success()">Success</button>
+    <button type="button" onclick="error()">Error</button>
+    <button type="button" onclick="info()">Info</button>
+    <button type="button" onclick="warning()">Warning</button>
 
     <notification-controller class="top-right"></notification-controller>
 
     <script type="text/javascript">
 
-        function successNotification() {
+        function success() {
             document.getElementsByTagName('notification-controller').item(0).success('This is a success alert. It should span multiple lines of code.');
         }
 
-        function errorNotification() {
+        function error() {
             document.getElementsByTagName('notification-controller').item(0).error('This is an error alert.');
+        }
+
+        function info() {
+            document.getElementsByTagName('notification-controller').item(0).info('This is an info alert.');
+        }
+
+        function warning() {
+            document.getElementsByTagName('notification-controller').item(0).warning('This is a warning alert.');
         }
 
     </script>
