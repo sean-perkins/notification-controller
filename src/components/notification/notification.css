@@ -5,6 +5,7 @@
     --padding: 0 10px;
     --icon-success-color: #01BFA5;
     --icon-error-color: #F44336;
+    --icon-size: 20px;
     --border-radius: 8px;
 
     user-select: none;
@@ -72,6 +73,9 @@
 
 ion-icon {
     padding: 0 10px;
+    height: var(--icon-size);
+    width: var(--icon-size);
+    min-width: var(--icon-size);
 }
 
 ion-icon.error {

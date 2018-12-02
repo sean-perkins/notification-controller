@@ -13,7 +13,7 @@ export class NotificationController {
 
     @Prop() animationIn: AnimationIn = 'slideInRight';
 
-    @Prop() animationOut: AnimationOut = 'slideOutTop';
+    @Prop() animationOut: AnimationOut = 'fadeOut';
 
     @Element() controllerEl: HTMLElement;
 

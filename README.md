@@ -13,7 +13,7 @@ Web component implementation of a notification styled UI. Inspired around Fireba
 
 
 ## Using a CDN
-- Put a script tag similar to this `<script src='https://unpkg.com/@academy-ui/notification@1.0.0/dist/notification-controller.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/@academy-ui/notification@1.0.1/dist/notification-controller.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 
