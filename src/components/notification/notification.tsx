@@ -52,7 +52,6 @@ export class AppNotification {
 
     getIcon() {
         let iconName = '';
-        console.log('type', this.type);
         switch (this.type) {
             case 'success':
                 iconName = this.successIcon;
@@ -67,7 +66,6 @@ export class AppNotification {
                 iconName = this.warningIcon;
                 break;
         }
-        console.log('iconName', iconName);
         return (
             <ion-icon class={this.type} name={iconName}></ion-icon>
         );
