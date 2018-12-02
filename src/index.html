@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Notifications</title>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="/build/notification-controller.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" onclick="successNotification()">Display Success Notification</button>
+
+    <button type="button" onclick="errorNotification()">Display Error Notification</button>
+
+    <notification-controller class="top-right"></notification-controller>
+
+    <script type="text/javascript">
+
+        function successNotification() {
+            document.getElementsByTagName('notification-controller').item(0).success('This is a success alert.');
+        }
+
+        function errorNotification() {
+            document.getElementsByTagName('notification-controller').item(0).error('This is an error alert.');
+        }
+
+    </script>
+</body>
+
+</html>

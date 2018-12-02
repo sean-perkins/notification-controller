@@ -1,0 +1,39 @@
+
+:host {
+    --top: 20px;
+    --bottom: 20px;
+    --right: 40px;
+    --left: 20px;
+    --notification-width: 235px;
+    position: fixed;
+}
+
+:host(.top-left) {
+    top: var(--top);
+    left: var(--right);
+}
+
+:host(.top-right) {
+    top: var(--top);
+    right: var(--right);
+}
+
+:host(.top-center) {
+    top: var(--top);
+    left: calc(50% - calc(var(--notification-width) / 2));
+}
+
+:host(.bottom-left) {
+    bottom: var(--bottom);
+    left: var(--left);
+}
+
+:host(.bottom-right) {
+    bottom: var(--bottom);
+    right: var(--right);
+}
+
+:host(.bottom-center) {
+    bottom: var(--bottom);
+    left: calc(50% - calc(var(--notification-width) / 2 ));
+}
